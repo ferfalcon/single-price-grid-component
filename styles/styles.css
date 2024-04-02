@@ -1,1 +1,18 @@
+:root {
+  --cl-brand: hsl(179, 62%, 43%);
+  --cl-accent: hsl(71, 73%, 54%);
+  --cl-neutral: hsl(204, 43%, 93%);
+  --cl-neutral-light: hsl(218, 22%, 67%);
+  --cl-white: hsl(0, 0%, 100%);
+  --cl-white-transparent: hsla(0, 0%, 100%, 0.5);
+}
+.signature {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 /*# sourceMappingURL=./styles.css.map */
