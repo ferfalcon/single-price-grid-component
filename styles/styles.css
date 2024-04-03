@@ -1,10 +1,139 @@
 :root {
   --cl-brand: hsl(179, 62%, 43%);
+  --cl-brand-light: hsl(179, 48%, 52%);
   --cl-accent: hsl(71, 73%, 54%);
   --cl-neutral: hsl(204, 43%, 93%);
   --cl-neutral-light: hsl(218, 22%, 67%);
   --cl-white: hsl(0, 0%, 100%);
   --cl-white-transparent: hsla(0, 0%, 100%, 0.5);
+  --ff-main: "Karla", sans-serif;
+  --fs-300: 0.875rem;
+  --fs-400: 0.938rem;
+  --fs-500: 1rem;
+  --fs-600: 1.125rem;
+  --fs-700: 1.25rem;
+  --fs-900: 2rem;
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+}
+.top-wrapper {
+  display: grid;
+  align-content: center;
+  margin: 0;
+  min-height: 100svh;
+  background: var(--cl-neutral);
+  font-family: var(--ff-main);
+  color: var(--cl-neutral-light);
+}
+.price-comp {
+  display: grid;
+  width: 90%;
+  max-width: 19.438rem;
+  margin: auto;
+  box-shadow: 0 0.938rem 1.875rem 0 rgba(0, 81, 171, 0.1488);
+}
+@media (min-width: 64rem) {
+  .price-comp {
+    max-width: 39.688rem;
+  }
+}
+.price-comp__section {
+  display: grid;
+  padding: 1.5rem;
+}
+.price-comp__section--join {
+  padding-block: 1.75rem 2rem;
+  border-radius: 0.313rem 0.313rem 0 0;
+  background: var(--cl-white);
+}
+.price-comp__section--subscription {
+  color: var(--cl-white);
+  background: var(--cl-brand);
+}
+.price-comp__section--why-us {
+  color: var(--cl-white);
+  background: var(--cl-brand-light);
+  border-radius: 0 0 0.313rem 0.313rem;
+}
+.price-comp__section-heading {
+  margin: 0;
+  color: var(--cl-white);
+  font-size: var(--fs-600);
+  letter-spacing: -0.014rem;
+}
+.price-comp__section--join .price-comp__section-heading {
+  color: var(--cl-brand);
+  font-size: var(--fs-700);
+  letter-spacing: -0.016rem;
+  margin-bottom: 1.5rem;
+}
+.price-comp__section--subscription .price-comp__section-heading,
+.price-comp__section--why-us .price-comp__section-heading {
+  margin-bottom: 1.125rem;
+}
+.price-comp__section-secondary-heading {
+  font-size: var(--fs-400);
+  color: var(--cl-accent);
+  line-height: 1.25rem;
+  letter-spacing: 0.012rem;
+  margin: 0 0 1rem;
+}
+.price-comp__section-copy {
+  margin: 0;
+  padding: 0;
+}
+.price-comp__section--join .price-comp__section-copy {
+  font-size: var(--fs-300);
+  line-height: 1.625rem;
+  letter-spacing: 0.011rem;
+}
+.price-comp__section--subscription .price-comp__section-copy {
+  line-height: 1.625rem;
+  letter-spacing: 0.013rem;
+  margin-bottom: 1.625rem;
+}
+.price-comp__section--why-us .price-comp__section-copy {
+  font-size: var(--fs-300);
+  line-height: 1.25rem;
+  letter-spacing: 0.011rem;
+  opacity: 0.75;
+  list-style: none;
+}
+.price-comp__price {
+  margin: 0 0 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.price-comp__price-value {
+  font-size: var(--fs-900);
+}
+.price-comp__price-period {
+  opacity: 0.5;
+}
+.price-comp__button {
+  font-weight: var(--fw-bold);
+  color: var(--cl-white);
+  background: var(--cl-accent);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.313rem;
+  padding: 0.9rem 0.5rem 0.925rem;
+  box-shadow: 0 0.625rem 0.625rem 0 rgba(0, 0, 0, 0.0973);
 }
 .signature {
   position: absolute;
