@@ -12,6 +12,7 @@
   --fs-500: 1rem;
   --fs-600: 1.125rem;
   --fs-700: 1.25rem;
+  --fs-800: 1.5rem;
   --fs-900: 2rem;
   --fw-regular: 400;
   --fw-bold: 700;
@@ -48,6 +49,7 @@ img {
 }
 @media (min-width: 64rem) {
   .price-comp {
+    grid-template-columns: 1fr 1fr;
     max-width: 39.688rem;
   }
 }
@@ -55,19 +57,39 @@ img {
   display: grid;
   padding: 1.5rem;
 }
+@media (min-width: 64rem) {
+  .price-comp__section {
+    padding: 2.5rem;
+  }
+}
 .price-comp__section--join {
   padding-block: 1.75rem 2rem;
   border-radius: 0.313rem 0.313rem 0 0;
   background: var(--cl-white);
 }
+@media (min-width: 64rem) {
+  .price-comp__section--join {
+    grid-column: 1 / -1;
+  }
+}
 .price-comp__section--subscription {
   color: var(--cl-white);
   background: var(--cl-brand);
+}
+@media (min-width: 64rem) {
+  .price-comp__section--subscription {
+    border-radius: 0 0 0 0.313rem;
+  }
 }
 .price-comp__section--why-us {
   color: var(--cl-white);
   background: var(--cl-brand-light);
   border-radius: 0 0 0.313rem 0.313rem;
+}
+@media (min-width: 64rem) {
+  .price-comp__section--why-us {
+    border-radius: 0 0 0.313rem 0;
+  }
 }
 .price-comp__section-heading {
   margin: 0;
@@ -81,6 +103,11 @@ img {
   letter-spacing: -0.016rem;
   margin-bottom: 1.5rem;
 }
+@media (min-width: 64rem) {
+  .price-comp__section--join .price-comp__section-heading {
+    font-size: var(--fs-800);
+  }
+}
 .price-comp__section--subscription .price-comp__section-heading,
 .price-comp__section--why-us .price-comp__section-heading {
   margin-bottom: 1.125rem;
@@ -89,8 +116,14 @@ img {
   font-size: var(--fs-400);
   color: var(--cl-accent);
   line-height: 1.25rem;
-  letter-spacing: 0.012rem;
+  letter-spacing: -0.012rem;
   margin: 0 0 1rem;
+}
+@media (min-width: 64rem) {
+  .price-comp__section-secondary-heading {
+    font-size: var(--fs-600);
+    letter-spacing: -0.014rem;
+  }
 }
 .price-comp__section-copy {
   margin: 0;
@@ -99,19 +132,27 @@ img {
 .price-comp__section--join .price-comp__section-copy {
   font-size: var(--fs-300);
   line-height: 1.625rem;
-  letter-spacing: 0.011rem;
+  letter-spacing: -0.011rem;
+}
+@media (min-width: 64rem) {
+  .price-comp__section--join .price-comp__section-copy {
+    font-size: var(--fs-500);
+    letter-spacing: -0.014rem;
+  }
 }
 .price-comp__section--subscription .price-comp__section-copy {
   line-height: 1.625rem;
-  letter-spacing: 0.013rem;
+  letter-spacing: -0.013rem;
   margin-bottom: 1.625rem;
 }
 .price-comp__section--why-us .price-comp__section-copy {
   font-size: var(--fs-300);
   line-height: 1.25rem;
-  letter-spacing: 0.011rem;
+  letter-spacing: -0.011rem;
   opacity: 0.75;
   list-style: none;
+  display: grid;
+  gap: 0.25rem;
 }
 .price-comp__price {
   margin: 0 0 0.25rem;
